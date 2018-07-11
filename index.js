@@ -31,14 +31,14 @@ client.on('message', message =>{
 :arrow_right: s!say 
 :arrow_right: s!restart 
 :arrow_right: s! 
-:arrow_right: s!buy
 :arrow_right: s!checkstock
 :arrow_right: s!banner
 :arrow_right: s!version
 :arrow_right: s!bot
 :arrow_right: s!site
 :arrow_right: s!store
-:arrow_right: s!avatar`)
+:arrow_right: s!avatar
+:arrow_right: s!status`)
     .setColor('RANDOM')
    message.channel.sendEmbed(embed);
   }
@@ -153,12 +153,6 @@ client.on('message', msg => {
   });
 
 client.on('message', msg => {
-    if (msg.content === 's!buy') {
-      msg.channel.send('Use the s! (exemple) command to buy it! ');
-    }
-  });
-
-client.on('message', msg => {
     if (msg.content === 's!site') {
       msg.channel.send('Not available at the moment!');
     }
@@ -191,6 +185,12 @@ client.on('message', msg => {
 client.on('message', msg => {
     if (msg.content === 's!status') {
       msg.channel.send('https://media.giphy.com/media/z21qY2auc8TatO4vkt/giphy.gif');
+    }
+  });
+
+client.on('message', msg => {
+    if (msg.content === 's!newad') {
+      msg.channel.send('https://media.giphy.com/media/ftebLqt1JtkAsSqqSF/giphy.gif');
     }
   });
 
