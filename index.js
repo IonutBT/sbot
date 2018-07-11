@@ -27,12 +27,9 @@ client.on('message', message =>{
     .setTitle('BOT INFO')
     .setDescription(`•prefix --> s!
 :zap:SBOT COMMANDS:zap:
-:arrow_right: s!mass 
-:arrow_right: s!support 
+:arrow_right: s!mass  
 :arrow_right: s!say 
-:arrow_right: s!serverinfo 
 :arrow_right: s!restart 
-:arrow_right: s!invite 
 :arrow_right: s! 
 :arrow_right: s!buy
 :arrow_right: s!checkstock
@@ -40,7 +37,8 @@ client.on('message', message =>{
 :arrow_right: s!version
 :arrow_right: s!bot
 :arrow_right: s!site
-:arrow_right: s!store`)
+:arrow_right: s!store
+:arrow_right: s!avatar`)
     .setColor('RANDOM')
    message.channel.sendEmbed(embed);
   }
@@ -149,18 +147,6 @@ member.send(reason)
 message.delete() }})}}} });
 
 client.on('message', msg => {
-    if (msg.content === 'e!invite') {
-      msg.channel.send('Invite **SBOT** https://discordapp.com/api/oauth2/authorize?client_id=466269076692533262&permissions=0&scope=bot  :tada:');
-    }
-  });
-
-client.on('message', msg => {
-    if (msg.content === 'e!support') {
-      msg.channel.send('support server ---> https://discord.gg/9SZksf9');
-    }
-  });
-
-client.on('message', msg => {
     if (msg.content === 's!') {
       msg.channel.send('(s!) is my prefix !');
     }
@@ -169,24 +155,6 @@ client.on('message', msg => {
 client.on('message', msg => {
     if (msg.content === 's!buy') {
       msg.channel.send('Use the s! (exemple) command to buy it! ');
-    }
-  });
-
-client.on('message', msg => {
-    if (msg.content === 's!buy @💸 DONATOR 💸') {
-      msg.channel.send('Your request has been received!! Wait until an operator is on this server!An operator will contact you privately!');
-    }
-  });
-
-client.on('message', msg => {
-    if (msg.content === 's!buy @🔵 PREMIUM MEMBER 🔵') {
-      msg.channel.send('Your request has been received!! Wait until an operator is on this server!An operator will contact you privately!');
-    }
-  });
-
-client.on('message', msg => {
-    if (msg.content === 's!buy @✔AVANSAT') {
-      msg.channel.send('Your request has been received!! Wait until an operator is on this server!An operator will contact you privately!');
     }
   });
 
@@ -203,12 +171,6 @@ client.on('message', msg => {
   });
 
 client.on('message', msg => {
-    if (msg.content === 's!checkstock') {
-      msg.channel.send('All grades displayed on # shop?? are available!');
-    }
-  });
-
-client.on('message', msg => {
     if (msg.content === 's!version') {
       msg.channel.send('SBOT V.1 scripted by yonly!');
     }
@@ -217,6 +179,18 @@ client.on('message', msg => {
 client.on('message', msg => {
     if (msg.content === 's!store') {
       msg.channel.send('All grades displayed on # shop?? are available!');
+    }
+  });
+
+client.on('message', msg => {
+    if (msg.content === 's!avatar') {
+    .setThumbnail(memberavatar)
+    }
+  });
+
+client.on('message', msg => {
+    if (msg.content === 's!status') {
+      msg.channel.send('https://media.giphy.com/media/z21qY2auc8TatO4vkt/giphy.gif');
     }
   });
 
